@@ -228,10 +228,11 @@ header a:hover {
         padding-top: 180px;
     }
     .testimonials .section_text {
-        width: 613px;
+        width: 673px;
         max-width: 100%;
         padding: 64px;
         padding-left: 48px;
+        padding-bottom: 30px;
         box-sizing: border-box;
     }
     .testimonial_wrap {
