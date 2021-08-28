@@ -257,6 +257,9 @@ header.pos_absolute {
     .testimonial_wrap .paragraph_small {
         margin-bottom: 26px;
     }
+    .testimonial_wrap .section_image {
+        max-height: 632px;
+    }
 /* testimonials end */
 
 /* faq start */

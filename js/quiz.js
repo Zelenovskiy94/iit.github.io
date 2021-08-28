@@ -72,7 +72,7 @@ function validateNameName(str) {
 	return str && isNaN(str) && str.length < 40
 }
 function validPhone(phone) {
-	var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+	var re = /^\+?\d[\d\(\)\ -]{5,14}\d$/;
 	return re.test(phone);
 }  
 $('input[type="radio"]').on('click', function(){
@@ -81,7 +81,7 @@ $('input[type="radio"]').on('click', function(){
 		$(this).closest('.quiz_question').addClass('valid')
 	}
 })
-$('#nameSchool, #yourName, #yourEmail, #yourPhone').on('blur', function(){
+$('#nameSchool, #yourName, #yourEmail, #yourPhone').on('input keyup', function(){
 	let validClass = () => {
 		$(this).addClass('valid')
 		$(this).removeClass('invalid')
@@ -114,7 +114,16 @@ $('#next').on('click', function(){
 			objData[name] = $(this).val()
 		})
 		sentResponse({
-			"Do you have access to a computer/laptop/tablet for school purposes?" : objData.structure
+			"Did you attend school in 2020": objData.attend,
+			"What’s the name of the school you attended?" : objData.nameSchool,
+			"What’s the last school grade you completed?" : objData.last_grade,
+			"Which grade are you applying for?" : objData.applying_grade,
+			"Which are you most interested in?" : objData.interest,
+			"Do you have access to a computer/laptop/tablet for school purposes?" : objData.access_to_tech,
+			"Which fee structure are you interested in?" : objData.structure,
+			"Name" : objData.your_name,
+			"Email" : objData.your_email,
+			"Phone" : objData.your_phone,
 		})
 		return
 	}
@@ -132,9 +141,11 @@ $('#back').on('click', function(){
 function sentResponse(objData) {
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", 'https://hooks.zapier.com/hooks/catch/10786736/b49g70w/', true);
-	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.setRequestHeader("Accept", "application/json; charset=UTF-8");
 	xhr.send(JSON.stringify(objData));
-	// redirectToThanksPage ()
+	xhr.onload = () => {
+		redirectToThanksPage ()
+	}
 
 }
 function redirectToThanksPage () {
