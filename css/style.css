@@ -18,6 +18,7 @@ li {
 :root {
     --main_green: #3A802E;
     --main_white: #ffffff;
+    --main_gray: #E5E5E5;
 }
 
 h1 {
@@ -64,11 +65,22 @@ p {
 .bg_green {
     background: var(--main_green);
 }
+.bg_gray {
+    background: var(--main_gray);
+}
 .bg_green * {
     color: var(--main_white);
 }
 .text_center {
     text-align: center;
+}
+.paragraph_large_XX {
+    font-size: 32px;
+    line-height: 51px;
+}
+.paragraph_large_X {
+    font-size: 24px;
+    line-height: 32px;
 }
 .paragraph_large {
     font-size: 20px;
@@ -84,6 +96,9 @@ p {
 }
 p, footer a {
     opacity: 0.7;
+}
+b {
+    font-weight: 700;
 }
 .triangle {
     width: 0;
@@ -155,11 +170,11 @@ header.pos_absolute {
     width: 100%;
     box-sizing: border-box;
 }
-header a {
+.header_nav a {
     color: var(--main_white);
     transition: 0.3s ease;
 }
-header a:hover {
+.header_nav a:hover {
     opacity: 0.7;
 }
 .header {
@@ -415,7 +430,7 @@ header a:hover {
     position:relative;
     width: 88%;
     height: auto;
-    background-color: #fff;
+    background-color: var(--main_white);
     display:none;
   }
   .content_acc p{
@@ -424,7 +439,81 @@ header a:hover {
   }
   /* accordion end */
 
-
+  /* thanks start */
+  .main_thanks {
+      background-color: #E5E5E5;
+      padding: 48px 0;
+  }
+  .main_thanks p {
+      opacity: 1 !important;
+  }
+    .step_container {
+        max-width: 800px;
+        background-color: var(--main_white);
+        padding: 36px 85px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    } 
+    .step_container:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .step_text {
+        display: flex;
+        align-items: center;
+    }
+    .step_icon {
+        width: 40px;
+        height: 40px;
+        background-color: var(--main_green);
+        color: var(--main_white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 50%;
+        font-style: normal;
+        margin-right: 16px;
+    }
+    .step_text + p {
+        margin-top: 36px;
+    }
+    .next_step_text {
+        margin-top: 48px;
+        margin-bottom: 36px;
+        font-weight: 700;
+    }
+    .share_fb {
+        width: 180px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: #619BF2;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        margin-top: 36px;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+    }
+    .share_fb:hover {
+        background: #3065b5;
+    }
+    .share_fb img {
+        width: auto;
+        margin-right: 12px;
+    }
+  /* thanks end */ 
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    height: 24px;
+    cursor: pointer;
+}
 @media (max-width: 1248px) {
     .wrapper {
         padding: 0 24px;
@@ -467,6 +556,14 @@ header a:hover {
       
         font-size: calc(12px + (14 - 12) * ( (100vw - 320px) / ( 1248 - 320) ));
         line-height: calc(20px + (22 - 20) * ( (100vw - 320px) / ( 1248 - 320) ));
+    }
+    .paragraph_large_XX {
+        font-size: calc(22px + (32 - 22) * ( (100vw - 320px) / ( 1248 - 320) ));
+        line-height: calc(25px + (55 - 25) * ( (100vw - 320px) / ( 1248 - 320) ));
+    }
+    .paragraph_large_X {
+        font-size: calc(15px + (24 - 15) * ( (100vw - 320px) / ( 1248 - 320) ));
+        line-height: calc(20px + (38 - 20) * ( (100vw - 320px) / ( 1248 - 320) ));
     }
     .about_us  {
         padding-top: 240px;
@@ -613,6 +710,19 @@ header a:hover {
     .sn-accordion-container {
         margin-top: 50px;
     }
+    .step_container {
+        padding: 26px 25px;
+    }
+    .step_text + p {
+        margin-top: 16px;
+    }
+    .share_fb {
+        margin-top: 16px;
+    }
+    .next_step_text {
+        margin-top: 22px;
+        margin-bottom: 16px;
+    }
 }
 @media(max-width: 600px) {
     .wrapper {
@@ -647,7 +757,7 @@ header a:hover {
         padding-top: 200px;
     }
     footer .logo span {
-        font-size: 11px;
+        font-size: 10px;
         margin-left: 8px;
     }
     footer .logo {

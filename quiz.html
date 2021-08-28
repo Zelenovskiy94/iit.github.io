@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header class="bg_green">
+        <div class="wrapper">
+            <div class="header">
+                <a href="index.html" class="logo">
+                    <img src="images/logo_icon.png" alt="logo">
+                    <span class="paragraph_medium">Intellisense Institute of Technology</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="bg_gray">
+        <section class="quiz_section">
+            <div class="wrapper">
+                <h3 class="text_center">Free Senior High School in Cebu (Limited Time Offer)</h3>
+                <div class="quiz">
+                    <div class="quiz_progressbar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <div class="quiz_content ">
+                        <div class="quiz_question">
+                            <h3 class="text_center">Did you attend school in 2020</h3>
+                            <div class="quiz_question_items quiz_question_items-radio">
+                                <div class="quiz_question_item">
+                                    <input id="attend1" type="radio" name="attend" data="Did you attend school in 2020" value="Yes">
+                                    <label for="attend1">Yes
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="attend2" type="radio" name="attend" data="Did you attend school in 2020" value="No">
+                                    <label for="attend2">No
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="quiz_question">
+                            <h3 class="text_center">What’s the name of the school you attended?</h3>
+                            <div class="quiz_question_items">
+                                <div class="quiz_question_item">
+                                    <label class="paragraph_middle" for="nameSchool">Your School Name</label>
+                                    <input id="nameSchool" type="text" name="nameSchool" placeholder="Enter the name of your school here" data="What’s the name of the school you attended?">
+                                </div>
+                               
+                            </div>
+                        </div>   
+                        <div class="quiz_question">
+                            <h3 class="text_center">What’s the last school grade you completed?</h3>
+                            <p class="paragraph_X_large text_center">I previously finished the following year</p>
+                            <div class="quiz_question_items quiz_question_items-radio">
+                                <div class="quiz_question_item">
+                                    <input id="last_grade1" type="radio" name="last_grade" data="What’s the last school grade you completed?" value="Grade 10">
+                                    <label for="last_grade1">Grade 10
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="last_grade2" type="radio" name="last_grade" data="What’s the last school grade you completed?" value="Grade 11">
+                                    <label for="last_grade2">Grade 11
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="last_grade3" type="radio" name="last_grade" data="What’s the last school grade you completed?" value="Grade 13">
+                                    <label for="last_grade3">Grade 12
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="last_grade4" type="radio" name="last_grade" data="What’s the last school grade you completed?" value="College">
+                                    <label for="last_grade4">College
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="quiz_question">
+                            <h3 class="text_center">Which grade are you applying for?</h3>
+                            <p class="paragraph_X_large text_center">I previously finished the following year</p>
+                            <div class="quiz_question_items quiz_question_items-radio">
+                                <div class="quiz_question_item">
+                                    <input id="applying_grade1" type="radio" name="applying_grade" data="Which grade are you applying for?" value="Grade 10">
+                                    <label for="last_grade1">Grade 10
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="applying_grade2" type="radio" name="applying_grade" data="Which grade are you applying for?" value="Grade 11">
+                                    <label for="applying_grade2">Grade 11
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="applying_grade3" type="radio" name="applying_grade" data="Which grade are you applying for?" value="Grade 13">
+                                    <label for="applying_grade3">Grade 12
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="applying_grade4" type="radio" name="applying_grade" data="Which grade are you applying for?" value="College">
+                                    <label for="applying_grade4">College
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="quiz_question">
+                            <h3 class="text_center">Which are you most interested in?</h3>
+                            <p class="paragraph_X_large text_center">I prefer the following schooling option</p>
+                            <div class="quiz_question_items quiz_question_items-radio width_280">
+                                <div class="quiz_question_item">
+                                    <input id="interest1" type="radio" name="interest" data="Which are you most interested in?" value="Study on campus in Cebu">
+                                    <label for="interest1">Study on campus in Cebu
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="interest2" type="radio" name="interest" data="Which are you most interested in?" value="Study remotely from home">
+                                    <label for="interest2">Study remotely from home
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="interest3" type="radio" name="interest" data="Which are you most interested in?" value="Blended with both on campus and at home">
+                                    <label for="interest3">Blended with both on campus and at home
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz_question">
+                            <h3 class="text_center">Do you have access to a computer/laptop/tablet for school purposes?</h3>
+                            <div class="quiz_question_items quiz_question_items-radio">
+                                <div class="quiz_question_item">
+                                    <input id="access_to_tech1" type="radio" name="access_to_tech" data="Do you have access to a computer/laptop/tablet for school purposes?" value="Yes">
+                                    <label for="access_to_tech1">Yes
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="access_to_tech2" type="radio" name="access_to_tech" data="Do you have access to a computer/laptop/tablet for school purposes?" value="No">
+                                    <label for="access_to_tech2">No
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="quiz_question">
+                            <h3 class="text_center">Which fee structure are you interested in?</h3>
+                            <div class="quiz_question_items quiz_question_items-radio width_280">
+                                <div class="quiz_question_item">
+                                    <input id="structure1" type="radio" name="structure" data="Do you have access to a computer/laptop/tablet for school purposes?" value="I want the free option">
+                                    <label for="structure1">I want the free option
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="quiz_question_item">
+                                    <input id="structure2" type="radio" name="structure" data="Do you have access to a computer/laptop/tablet for school purposes?" value="I want to pay for the schooling">
+                                    <label for="structure2">I want to pay for the schooling
+                                        <div class="radio_icon">
+                                            <i></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="quiz_question">
+                            <h3 class="text_center">Enter your contact information to receive the results</h3>
+                            <div class="quiz_question_items">
+                                <div class="quiz_question_item">
+                                    <label class="paragraph_middle" for="yourName">What’s Your Name?</label>
+                                    <input id="yourName" type="text" name="your_name" placeholder="Enter your name" data="Name">
+                                    <label class="paragraph_middle" for="yourEmail">What’s Your Email Address?</label>
+                                    <input id="yourEmail" type="text" name="your_email" placeholder="Enter your email address" data="Email">
+                                    <label class="paragraph_middle" for="yourPhone">What’s Your Phone Number?</label>
+                                    <input id="yourPhone" type="text" name="your_phone" placeholder="Enter your phone number" data="Phone">
+                                </div>
+                               
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="quiz_nav">
+                        <div>
+                            <a href="index.html" id="cancel" class="cancel text_green">Cancel</a>
+                            <button id="back" style="display: none;" class="cancel text_green">Back</button>
+                            <button id="next" class="next disabled">Next</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg_green">
+        <div class="wrapper flex-row">
+            <div class="footer_left">
+                <div class="logo">
+                    <img src="images/logo_icon.png" alt="logo">
+                    <span class="paragraph_small">Intellisense Institute of Technology</span>
+                </div>
+                <p class="paragraph_small">2F Aspac Rural Bank Building,<br> Guizo, Mandaue City 6014<br> Mandaue City, Cebu</p>
+                <a href="#" class="facebook_link">
+                    <img src="images/social_media/fb.svg" alt="facebook">
+                </a >
+            </div>
+            <nav class="footer_nav footer_right flex-row">
+                <div>
+                    <h6 class="title_chevron">Navigation<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="index.html#block_to_quiz" class="paragraph_small">Quiz</a></li>
+                        <li><a href="index.html#about" class="paragraph_small">About</a></li>
+                        <li><a href="index.html#testimonials" class="paragraph_small">Testimonials</a></li>
+                        <li><a href="index.html#faq" class="paragraph_small">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6  class="title_chevron">Contact<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">iitcebu.net/contact_us</a></li>
+                        <li><a href="#">+63 32 316 5477</a></li>
+                        <li><a href="#">gregoria.flores@iitcebu.net</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6  class="title_chevron">Information<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">GDPR Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

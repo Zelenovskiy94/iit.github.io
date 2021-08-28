@@ -37,7 +37,7 @@
                     <div class="triangle triangle_4"></div>
                     <h2 class="text_center">Do you Qualify for Free Senior High School?<br>Take the Quiz Now!</h2>
                     <p class="paragraph_middle text_center">Complete the quiz below to see if you qualify for Free 2021 placement.</p>
-                    <a href="#" class="btn_to_quiz text_green">Start Quiz Now<img src="images/arrow_right.svg"></a>
+                    <a href="quiz.html" class="btn_to_quiz text_green">Start Quiz Now<img src="images/arrow_right.svg"></a>
                 </div>
             </div>
         </section>
@@ -189,5 +189,22 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+        const anchors = document.querySelectorAll('a[href*="#"]')
+
+        for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const blockID = anchor.getAttribute('href').substr(1)
+            
+            document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+            })
+        })
+        }
+
+    </script>
 </body>
 </html>

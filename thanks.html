@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg_green">
+        <div class="wrapper">
+            <div class="header">
+                <a href="index.html" class="logo">
+                    <img src="images/logo_icon.png" alt="logo">
+                    <span class="paragraph_medium">Intellisense Institute of Technology</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main_thanks">
+        <section>
+            <div class="wrapper">
+                <p class="paragraph_large_XX text_center">Congratulations <b id="name"></b>, 
+                    You qualify for Free Senior High School at IIT Cebu!</p>
+                <p class="paragraph_large_XX text_center next_step_text"> Next Step</p>
+                <div class="step_container">
+                    <p class="paragraph_large_XX text_center step_text"><i class="step_icon">1</i> First Step</p>
+                    <p class="paragraph_large_X text_center ">Share your quiz result on facebook</p>
+                    <button class="share_fb"><img src="images/social_media/facebook.svg">Share</button>
+                </div>
+                <div class="step_container">
+                    <p class="paragraph_large_XX text_center step_text"><i class="step_icon">2</i> First Step</p>
+                    <p class="paragraph_large_X text_center ">Complete the full application form to secure your placement
+                        Click here to complete the application <a style="color: #619BF2" href="#">LINK</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg_green">
+        <div class="wrapper flex-row">
+            <div class="footer_left">
+                <div class="logo">
+                    <img src="images/logo_icon.png" alt="logo">
+                    <span class="paragraph_small">Intellisense Institute of Technology</span>
+                </div>
+                <p class="paragraph_small">2F Aspac Rural Bank Building,<br> Guizo, Mandaue City 6014<br> Mandaue City, Cebu</p>
+                <a href="#" class="facebook_link">
+                    <img src="images/social_media/fb.svg" alt="facebook">
+                </a >
+            </div>
+            <nav class="footer_nav footer_right flex-row">
+                <div>
+                    <h6 class="title_chevron">Navigation<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="index.html#block_to_quiz" class="paragraph_small">Quiz</a></li>
+                        <li><a href="index.html#about" class="paragraph_small">About</a></li>
+                        <li><a href="index.html#testimonials" class="paragraph_small">Testimonials</a></li>
+                        <li><a href="index.html#faq" class="paragraph_small">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6  class="title_chevron">Contact<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">iitcebu.net/contact_us</a></li>
+                        <li><a href="#">+63 32 316 5477</a></li>
+                        <li><a href="#">gregoria.flores@iitcebu.net</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6  class="title_chevron">Information<i class="icon_chevron"></i></h6>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">GDPR Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        let name = localStorage.getItem('quiz_name');
+        let nameElement = document.querySelector('#name').textContent = name 
+    </script>
+</body>
+</html>
