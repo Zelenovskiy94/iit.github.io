@@ -128,7 +128,7 @@ $('#next').on('click', function(){
 		return
 	}
 	activeSlide(+$(this).attr('next-item'))
-	document.getElementById('progress').scrollIntoView({
+	document.getElementById('quiz').scrollIntoView({
 		behavior: 'smooth',
 		block: 'start'
 		})
