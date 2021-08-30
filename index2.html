@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>IIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -19,31 +20,29 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCJN9CJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header class="bg_green">
+    <header class="pos_absolute bg_green">
         <div class="wrapper">
             <div class="header">
-                <a href="index.html" class="logo">
+                <div class="logo">
                     <img src="images/logo_icon.png" alt="logo">
                     <span class="paragraph_medium">Intellisense Institute of Technology</span>
-                </a>
+                </div>
+                <nav class="header_nav">
+                    <li><a href="#block_to_quiz" class="paragraph_small">Quiz</a></li>
+                    <li><a href="#contact_us" class="paragraph_small">Contact</a></li>
+                </nav>
             </div>
         </div>
     </header>
-    <main class="main_thanks">
-        <section>
+    <main>
+        <section class="main_screen height_auto">
             <div class="wrapper">
-                <p class="paragraph_large_XX text_center">Congratulations <b id="name"></b>, 
-                    You qualify for Free Senior High School at IIT Cebu!</p>
-                <p class="paragraph_large_XX text_center next_step_text"> Next Step</p>
-                <div class="step_container">
-                    <p class="paragraph_large_XX text_center step_text"><i class="step_icon">1</i> First Step</p>
-                    <p class="paragraph_large_X text_center ">Share your quiz result on facebook</p>
-                    <button class="share_fb"><img src="images/social_media/facebook.svg">Share</button>
-                </div>
-                <div class="step_container">
-                    <p class="paragraph_large_XX text_center step_text"><i class="step_icon">2</i> First Step</p>
-                    <p class="paragraph_large_X text_center ">Complete the full application form to secure your placement
-                        Click here to complete the application <a style="color: #619BF2" href="#">LINK</a></p>
+                <h1 class="text_center"><span class="text_green text_bg_green">Free</span> Senior High School in Cebu <span class="text_green text_bg_green">Limited Time Offer</span></h1>
+                <p class="paragraph_large text_center">ITT Cebu is offering free Senior High School starting <span class="text_green">September 2021</span><br> There are still <span class="text_green">197 places left</span></p>
+                <div id="block_to_quiz" class="block_to_quiz bg_gray_light">
+                    <h2 class="text_center">Do you Qualify for Free Senior High School?<br><span class="text_green">Take the Quiz Now!</span></h2>
+                    <p class="paragraph_middle text_center">Complete the quiz below to see if you qualify for <span class="text_green">Free 2021 placement.</span></p>
+                    <a href="quiz.html" class="btn_to_quiz bg_green">Start Quiz Now<img src="images/arrow_right_white.svg"></a>
                 </div>
             </div>
         </section>
@@ -64,16 +63,16 @@
                 <div>
                     <h6 class="title_chevron">Navigation<i class="icon_chevron"></i></h6>
                     <ul>
-                        <li><a href="index.html#block_to_quiz" class="paragraph_small">Quiz</a></li>
+                        <li><a href="#block_to_quiz" class="paragraph_small">Quiz</a></li>
                         <li><a href="index.html#about" class="paragraph_small">About</a></li>
                         <li><a href="index.html#testimonials" class="paragraph_small">Testimonials</a></li>
                         <li><a href="index.html#faq" class="paragraph_small">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h6  class="title_chevron">Contact<i class="icon_chevron"></i></h6>
+                    <h6 id="contact_us" class="title_chevron">Contact<i class="icon_chevron"></i></h6>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a  href="#">Contact Us</a></li>
                         <li><a href="#">iitcebu.net/contact_us</a></li>
                         <li><a href="#">+63 32 316 5477</a></li>
                         <li><a href="#">gregoria.flores@iitcebu.net</a></li>
@@ -90,9 +89,24 @@
             </nav>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <script>
-        let name = localStorage.getItem('quiz_name');
-        let nameElement = document.querySelector('#name').textContent = name 
+        const anchors = document.querySelectorAll('header a[href*="#"]')
+
+        for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const blockID = anchor.getAttribute('href').substr(1)
+            
+            document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+            })
+        })
+        }
+
     </script>
 </body>
 </html>

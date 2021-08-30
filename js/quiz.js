@@ -114,13 +114,13 @@ $('#next').on('click', function(){
 			objData[name] = $(this).val()
 		})
 		sentResponse({
-			"Did you attend school in 2020": objData.attend,
-			"What’s the name of the school you attended?" : objData.nameSchool,
-			"What’s the last school grade you completed?" : objData.last_grade,
-			"Which grade are you applying for?" : objData.applying_grade,
-			"Which are you most interested in?" : objData.interest,
-			"Do you have access to a computer/laptop/tablet for school purposes?" : objData.access_to_tech,
-			"Which fee structure are you interested in?" : objData.structure,
+			"School In 2020": objData.attend,
+			"School Name" : objData.nameSchool,
+			"Last School Grade" : objData.last_grade,
+			"Grade Applying" : objData.applying_grade,
+			"Interested In" : objData.interest,
+			"Have Computer/Phone" : objData.access_to_tech,
+			"Fee Structure" : objData.structure,
 			"Name" : objData.your_name,
 			"Email" : objData.your_email,
 			"Phone" : objData.your_phone,

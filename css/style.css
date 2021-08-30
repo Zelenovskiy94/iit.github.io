@@ -7,7 +7,8 @@
     color: #121212;
 }
 
-li {
+header li,
+footer li {
     list-style: none;
 }
 
@@ -19,6 +20,7 @@ li {
     --main_green: #3A802E;
     --main_white: #ffffff;
     --main_gray: #E5E5E5;
+    --main_gray_light: #FAFAFA;
 }
 
 h1 {
@@ -31,6 +33,9 @@ h1 {
 h1 .text_green {
     background: rgba(255, 255, 255, 0.1);
     padding: 0 10px;
+}
+h1 .text_bg_green {
+    background: rgba(186, 234, 225, 0.46);
 }
 h2,h3,h4,h5,h6 {
     font-weight: 700;
@@ -63,10 +68,14 @@ p {
     font-weight: inherit;
 }
 .bg_green {
-    background: var(--main_green);
+    background: var(--main_green) !important;
+    color: var(--main_white);
 }
 .bg_gray {
     background: var(--main_gray);
+}
+.bg_gray_light{
+    background: var(--main_gray_light);
 }
 .bg_green * {
     color: var(--main_white);
@@ -97,7 +106,7 @@ p {
 p, footer a {
     opacity: 0.7;
 }
-b {
+b, strong {
     font-weight: 700;
 }
 .triangle {
@@ -156,6 +165,23 @@ img {
 .logo img{
     width: 48px;
     height: 48px;
+}
+.main_text {
+    padding: 80px 0;
+
+}
+.main_text * {
+    opacity: 1;
+}
+.main_text a {
+    text-decoration: underline;
+}
+.main_text li {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.main_text ol {
+    margin-top: 20px;
 }
 
 
@@ -221,6 +247,12 @@ header.pos_absolute {
     }
     .block_to_quiz h2 {
         margin-bottom: 24px;
+    }
+    .height_auto {
+        max-height: none !important;
+    }
+    .main_screen.height_auto {
+        padding-bottom: 180px;
     }
 /* main screen end */ 
 
@@ -611,6 +643,9 @@ header.pos_absolute {
     .testimonials .section_text {
         padding: 30px 15px;
     }
+    .main_screen.height_auto {
+        padding-bottom: 100px;
+    }
 }
 
 @media(max-width: 800px) {
@@ -725,6 +760,9 @@ header.pos_absolute {
     .next_step_text {
         margin-top: 22px;
         margin-bottom: 16px;
+    }
+    .main_screen.height_auto {
+        padding-bottom: 80px;
     }
 }
 @media(max-width: 600px) {
