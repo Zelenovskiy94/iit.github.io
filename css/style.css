@@ -25,10 +25,10 @@ footer li {
 
 h1 {
     font-weight: 800;
-    font-size: 64px;
-    line-height: 102px;
+    font-size: 54px;
+    line-height: 92px;
     text-transform: uppercase;
-    margin-bottom: 36px;
+    margin-bottom: 6px;
 }
 h1 .text_green {
     background: rgba(255, 255, 255, 0.1);
@@ -231,14 +231,14 @@ header.pos_absolute {
     }
     .main_screen {
         padding: 68px 0;
-        padding-top: 180px;
-        max-height: 800px;
+        padding-top: 110px;
+        max-height: 670px;
         box-sizing: border-box;
     }
     .main_screen .paragraph_large {
         max-width: 700px;
         margin: 0 auto;
-        margin-bottom: 58px;
+        margin-bottom: 18px;
     }
     .block_to_quiz {
         padding: 80px;
@@ -554,15 +554,15 @@ header.pos_absolute {
         padding: 0 24px;
     }
     h1 {
-        font-size: calc(28px + (64 - 28) * ( (100vw - 320px) / ( 1248 - 320) ));
-        line-height: calc(38px + (102 - 38) * ( (100vw - 320px) / ( 1248 - 320) ));
+        font-size: calc(26px + (54 - 26) * ( (100vw - 320px) / ( 1248 - 320) ));
+        line-height: calc(38px + (92 - 38) * ( (100vw - 320px) / ( 1248 - 320) ));
     }
     h2 {
-        font-size: calc(25px + (42 - 25) * ( (100vw - 320px) / ( 1248 - 320) ));
+        font-size: calc(24px + (42 - 25) * ( (100vw - 320px) / ( 1248 - 320) ));
         line-height: calc(32px + (67 - 32) * ( (100vw - 320px) / ( 1248 - 320) ));
     }
     h3 {
-        font-size: calc(22px + (42 - 22) * ( (100vw - 320px) / ( 1248 - 320) ));
+        font-size: calc(22px + (32 - 22) * ( (100vw - 320px) / ( 1248 - 320) ));
         line-height: calc(28px + (51 - 28) * ( (100vw - 320px) / ( 1248 - 320) ));
     }
     h4 {
@@ -620,7 +620,7 @@ header.pos_absolute {
         flex-direction: column;
     }
     .main_screen {
-        max-height: 740px;
+        max-height: 550px;
     }
     footer {
         padding: 40px 0;
@@ -657,13 +657,13 @@ header.pos_absolute {
     }
     .main_screen {
         padding-top: 120px;
-        max-height: 620px;
+        max-height: 520px;
     }
     h1 {
-        margin-bottom: 25px;
+        margin-bottom: 5px;
     }
     .main_screen .paragraph_large {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .set_acc {
         padding: 14px 25px 14px 25px;
